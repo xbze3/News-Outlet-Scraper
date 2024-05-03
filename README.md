@@ -1,6 +1,6 @@
 # News Outlet Web-Scraper
 
-A Python program that scrapes [Bloomberg News Outlet Website](https://www.bloomberg.com/) and [Investing News Outlet Website](https://www.investing.com/) and returns the top headlines associated with a user-provided search term(s).
+A Python program that scrapes [Bloomberg](https://www.bloomberg.com/) News Outlet Website and [Investing](https://www.investing.com/) News Outlet Website and returns the top headlines associated with a user-provided search term(s).
 
 ## Libraries
 
