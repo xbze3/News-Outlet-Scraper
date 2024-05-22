@@ -4,15 +4,11 @@ A Python program that scrapes [Bloomberg](https://www.bloomberg.com/) News Outle
 
 ## Libraries
 
-`requests`
-
-`BeautifulSoup from bs4`
-
-`re`
-
-`pyfiglet`
-
-`datetime`
+- `requests`
+- `BeautifulSoup from bs4`
+- `re`
+- `pyfiglet`
+- `datetime`
 
 NOTE: All libraries can be installed using the command `pip install -r requirements.txt`.
 
