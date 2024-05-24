@@ -25,6 +25,7 @@ def getBloomberg(userInput):
     page = requests.get(URL, headers=headers)
     soup = BeautifulSoup(page.content, "html.parser")
 
+    img = [img['src'] for img in soup.find_all('img', class_=lambda x: x and re.search(r'thumbnail', x), src=True)]
     eyebrowData = [x.get_text() for x in soup.find_all('div', attrs={'class': lambda x: x and re.compile(r'^eyebrow').match(x)})]
     headlineData = [x.get_text() for x in soup.find_all('a', attrs={'class': lambda x: x and re.compile(r'^headline').match(x)})]
     link = [a['href'] for a in soup.find_all('a', class_= lambda x: x and re.compile(r'^headline').match(x), href=True) if a.text]
@@ -33,7 +34,7 @@ def getBloomberg(userInput):
     print("\n " + "=" * 32 + " BLOOMBERG.COM " + "=" * 32)
 
     for i in range(0, len(eyebrowData)):
-        print(f"\n [Sector]: {eyebrowData[i].upper()}\n [Headline]: {headlineData[i]}\n [Publish On]: {publishDate[i]}\n [Link]: {link[i]}")
+        print(f"\n[Image]: {img[i]} \n [Sector]: {eyebrowData[i].upper()}\n [Headline]: {headlineData[i]}\n [Publish On]: {publishDate[i]}\n [Link]: {link[i]}")
 
 def getInvesting(userInput):
     
@@ -58,3 +59,5 @@ def getInvesting(userInput):
 getBloomberg(search)
 getInvesting(search)
 print("\n " + "=" * 36 + " Done " + "=" * 36)
+
+# thumbnailWrapper__23c201ad78
