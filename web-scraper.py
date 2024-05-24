@@ -60,5 +60,3 @@ def getInvesting(userInput):
 getBloomberg(search)
 getInvesting(search)
 print("\n " + "=" * 36 + " Done " + "=" * 36)
-
-# thumbnailWrapper__23c201ad78
