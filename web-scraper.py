@@ -45,6 +45,7 @@ def getInvesting(userInput):
     page = requests.get(URL, headers=headers)
     soup = BeautifulSoup(page.content, "html.parser")
 
+    # img = img_srcs = [img['src'] for a in soup.find_all('a', class_='img') for img in a.find_all('img', src=True)]
     headlineData = [x.get_text() for x in soup.find_all('a', attrs={'class': 'title'})]
     link = [a['href'] for a in soup.find_all('a', class_= 'title', href=True) if a.text]
     # publishDate = [x.get_text() for x in soup.find_all('time', attrs={'class': 'date'})]
